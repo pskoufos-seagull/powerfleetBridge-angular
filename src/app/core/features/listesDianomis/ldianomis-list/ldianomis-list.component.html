@@ -1,0 +1,47 @@
+<div class="container-fluid ">
+    <h1 class="mt-3">Λίστες Διανομής</h1>
+    <div class="d-flex justify-content-end mt-3">
+        <a href="" class="btn btn-primary">Φτιαξε Δρομολογιο</a>
+    </div>
+
+    <ng-container *ngIf="listes">
+        <table class="table table-bordered table-secondary table-striped mt-2">
+        <thead>
+            <tr>
+                <th>ID1</th>
+                <th>Ημ/νία</th>
+                <th>Παραστατικό</th>
+                <th>Κατάσταση</th>
+                <th>Περιεχόμενο</th>
+                <th>Packing</th>
+                <th>Αρ. Φορτωτικών</th>
+                <th>Υποκατάστημα</th>
+                <th>Οδηγός</th>
+                <th>Πινακίδα</th>
+                <th>Κατασταση2</th>
+                <th>Τοπική Διανομή</th>
+                <th>Πληρωτέο</th>
+                <th>Εκτυπώθηκε</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let l of listes' >
+                <td>{{l.id}}</td>
+                <td>{{l.ldate}}</td>
+                <td>{{l.parastNum}}</td>
+                <td>{{l.status}}</td>
+                <td>{{l.contents}}</td>
+                <td>{{l.packingID}}</td>                
+                <td>{{l.countFortotikes}}</td>
+                <td>{{l.branchID}}</td>    
+                <td>{{l.driver}}</td>    
+                <td>{{l.tractor}}</td>    
+                <td>{{l.statusFortDesc}}</td>    
+                <td>{{l.flagTopikiDianomi}}</td>    
+                <td>{{l.fortotPliroteo}}</td>    
+                <td>{{l.flagPrinted}}</td>    
+            </tr>
+        </tbody>
+    </table>
+    </ng-container>
+</div>
